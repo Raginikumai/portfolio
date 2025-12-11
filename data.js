@@ -4,9 +4,18 @@
 */
 
 const heroData = {
-    title: "Hi, I'm <span class='highlight'>Ragini Kumain</span>.<br>Architecting Scalable Backends.",
+    title: `
+    Hi, I'm <span class='highlight'>Ragini Kumain</span>.
+    <br>
+    <div class="hero-role-wrap">
+        <span class="hero-role">
+            <span id="role-text">Backend</span>
+            <span>Engineer</span>
+        </span>
+    </div>
+    `,
 
-    bio: "Software Engineer bridging the gap between <strong>MERN Stack</strong> logic and <strong>Enterprise Data Engineering</strong>. Specialized in Cost Reduction, Performance Optimization, and Large-Scale Migrations."
+    bio: "Work spanning system stability and data workflow engineering, using <strong>Node.js</strong>, <strong>Express</strong>, and <strong>Databricks</strong> alongside practical <strong>API design</strong>, deep <strong>debugging</strong>, clean <strong>refactoring</strong>, and migration processes tuned for clarity, performance, and reliability."
 };
 
 /* 
@@ -22,57 +31,78 @@ const heroData = {
    - Updated Databricks to use the official SVG image.
 */
 const techStack = [
+    // Core Backend
     {
         name: "Node.js",
-        icon: "devicon-nodejs-plain colored", // Added 'colored'
+        icon: "devicon-nodejs-plain colored",
         color: "#339933",
         size: "large",
         desc: "Backend Core"
     },
     {
         name: "Databricks",
-        // We will handle this custom image in script.js, keep this string as is
         icon: "databricks-logo",
         color: "#FF3621",
         size: "large",
         desc: "Data Engineering",
         customIcon: true
     },
+
+    // Backend Framework
+    {
+        name: "Express",
+        icon: "devicon-express-original",
+        color: "#4B5563",
+        size: "medium",
+        desc: "API Framework"
+    },
+
+    // Database
     {
         name: "MongoDB",
-        icon: "devicon-mongodb-plain colored", // Added 'colored'
+        icon: "devicon-mongodb-plain colored",
         color: "#47A248",
-        size: "small"
+        size: "medium",
+        desc: "NoSQL DB"
     },
+
+    // Frontend
     {
         name: "React",
-        icon: "devicon-react-original colored", // Added 'colored'
+        icon: "devicon-react-original colored",
         color: "#61DAFB",
-        size: "small"
+        size: "medium",
+        desc: "UI Library"
     },
+
+    // Tools
     {
         name: "Python",
-        icon: "devicon-python-plain colored", // Added 'colored'
+        icon: "devicon-python-plain colored",
         color: "#3776AB",
-        size: "small"
+        size: "small",
+        desc: "Scripting"
     },
     {
         name: "Docker",
-        icon: "devicon-docker-plain colored", // Added 'colored'
+        icon: "devicon-docker-plain colored",
         color: "#2496ED",
-        size: "small"
+        size: "small",
+        desc: "Containers"
     },
     {
         name: "Postman",
-        icon: "devicon-postman-plain colored", // Added 'colored'
+        icon: "devicon-postman-plain colored",
         color: "#FF6C37",
-        size: "small"
+        size: "small",
+        desc: "API Testing"
     },
     {
         name: "Git",
-        icon: "devicon-git-plain colored", // Added 'colored'
+        icon: "devicon-git-plain colored",
         color: "#F05032",
-        size: "small"
+        size: "small",
+        desc: "Version Control"
     }
 ];
 

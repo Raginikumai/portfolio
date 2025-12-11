@@ -84,3 +84,25 @@ hamburger.addEventListener('click', () => {
         icon.classList.add('fa-bars');
     }
 });
+
+const roles = ["Backend", "Data"];
+let index = 0;
+
+const roleEl = document.getElementById("role-text");
+
+function swapRole() {
+    roleEl.classList.add("fade-out");
+
+    setTimeout(() => {
+        index = (index + 1) % roles.length;
+        roleEl.textContent = roles[index];
+        roleEl.classList.remove("fade-out");
+        roleEl.classList.add("fade-in");
+    }, 400);
+
+    setTimeout(() => {
+        roleEl.classList.remove("fade-in");
+    }, 800);
+}
+
+setInterval(swapRole, 3000);
