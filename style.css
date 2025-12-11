@@ -12,7 +12,12 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+
+html,
 body {
+  overflow-x: hidden; 
+  width: 100%;
+  position: relative;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -322,7 +327,7 @@ footer {
     z-index: 1001;
 
     /* Apple-Style Translucency */
-    background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+    /* background: rgba(255, 255, 255, 0.6); Semi-transparent white */
     backdrop-filter: blur(12px); /* The "Frosted Glass" blur */
     -webkit-backdrop-filter: blur(12px); /* For Safari/iPhone */
 
@@ -333,9 +338,9 @@ footer {
     transition: 0.3s;
   }
 
-  .hamburger:active {
+  /* .hamburger:active {
     background: rgba(255, 255, 255, 0.8);
-  }
+  } */
 
   /* Inside @media (max-width: 768px) */
   .nav-links {
