@@ -1,10 +1,11 @@
-(function () {
+(function() {
     'use strict';
 
     document.addEventListener('DOMContentLoaded', () => {
         initMobileMenu();
         renderTechStack();
         renderProjects();
+        initRoleSwapper();
     });
 
     const DOM = {
@@ -13,8 +14,25 @@
         bentoTemplate: document.getElementById('bento-box-template'),
         projectTemplate: document.getElementById('project-card-template'),
         hamburger: document.querySelector('.hamburger'),
-        navbar: document.querySelector('.navbar')
+        navbar: document.querySelector('.navbar'),
+        roleText: document.getElementById('role-text')
     };
+
+    function initRoleSwapper() {
+        if (!DOM.roleText) return;
+        const roles = ["Backend", "the Data"];
+        let roleIndex = 0;
+
+        setInterval(() => {
+            DOM.roleText.classList.add('fade-out');
+
+            setTimeout(() => {
+                roleIndex = (roleIndex + 1) % roles.length;
+                DOM.roleText.textContent = roles[roleIndex];
+                DOM.roleText.classList.remove('fade-out');
+            }, 300);
+        }, 3000);
+    }
 
     function renderTechStack() {
         if (!DOM.techContainer || !DOM.bentoTemplate) return;

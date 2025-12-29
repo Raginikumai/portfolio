@@ -214,6 +214,17 @@ h3 {
   margin-bottom: var(--spacing-6);
 }
 
+#role-text {
+  display: inline-block;
+  text-align: left;
+  width: 240px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
 .hero p {
   max-width: 650px;
   margin: 0 auto var(--spacing-8);
