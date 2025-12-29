@@ -5,71 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ragini Kumain | Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Official Tech Icons (Devicon) -->
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <!-- FontAwesome for UI icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <nav class="navbar">
-        <div class="logo">Ragini<span class="dot">.</span>Dev</div>
-        <div class="nav-links">
-            <a href="#bento-grid">Tech Stack</a>
+    <header class="header">
+        <a href="/" class="logo">Ragini<span class="dot">.</span>Dev</a>
+        <nav class="navbar">
+            <a href="#tech-stack">Tech Stack</a>
             <a href="#projects">Case Studies</a>
             <a href="#contact" class="btn-nav">Hire Me</a>
-        </div>
-        <div class="hamburger"><i class="fas fa-bars"></i></div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="badge"><i class="fas fa-check-circle"></i> 2+ Years Experience</div>
-                <h1 id="hero-title">Loading...</h1>
-                <p id="hero-bio">Loading...</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn primary">View Work</a>
-                    <a href="https://credentials.databricks.com/0cd1f12d-e442-4ed2-9c5f-228ee7828b8f#acc.2zENJSO0" target="_blank" class="btn secondary">
-                        <i class="fas fa-certificate"></i> Databricks Certified
-                    </a>
-                </div>
-            </div>
-        </div>
+        </nav>
+        <button class="hamburger" aria-label="Open menu">
+            <span class="fas fa-bars" aria-hidden="true"></span>
+        </button>
     </header>
 
-    <!-- THE BENTO GRID (Tech Stack) -->
-    <section id="bento-grid" class="container">
-        <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
-        <!-- This grid is empty. JavaScript will fill it with boxes. -->
-        <div class="bento-container" id="tech-container"></div>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="badge"><span class="fas fa-check-circle" aria-hidden="true"></span> 2+ Years Experience</div>
+                    <h1>Hi, I'm <span class='highlight'>Ragini Kumain</span>.<br> Backend &amp; Data Engineer</h1>
+                    <p>Work spanning system stability and data workflow engineering, using <strong>Node.js</strong>, <strong>Express</strong>, and <strong>Databricks</strong> alongside practical <strong>API design</strong>, deep <strong>debugging</strong>, clean <strong>refactoring</strong>, and migration processes tuned for clarity, performance, and reliability.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn primary">View Work</a>
+                        <a href="https://credentials.databricks.com/0cd1f12d-e442-4ed2-9c5f-228ee7828b8f#acc.2zENJSO0" target="_blank" class="btn secondary">
+                            <span class="fas fa-certificate" aria-hidden="true"></span> Databricks Certified
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2 class="section-title">Engineering <span class="gradient-text">Case Studies</span></h2>
-        <!-- This grid is empty. JavaScript will fill it with cards. -->
-        <div class="project-grid" id="project-container"></div>
-    </section>
+        <section id="tech-stack" class="container">
+            <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+            <div class="bento-container" id="tech-container"></div>
+        </section>
 
-    <!-- Contact -->
+        <section id="projects" class="container">
+            <h2 class="section-title">Engineering <span class="gradient-text">Case Studies</span></h2>
+            <div class="project-grid" id="project-container"></div>
+        </section>
+    </main>
+
     <footer id="contact" class="container center">
         <h2>Let's Build Scalable Systems.</h2>
         <a href="mailto:raginikumain@gmail.com" class="email-link">raginikumain@gmail.com</a>
         <div class="socials">
-            <a href="https://linkedin.com/in/ragini-kumain" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:raginikumain@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/ragini-kumain" target="_blank" aria-label="LinkedIn"><span class="fab fa-linkedin" aria-hidden="true"></span></a>
+            <a href="mailto:raginikumain@gmail.com" aria-label="Email"><span class="fas fa-envelope" aria-hidden="true"></span></a>
         </div>
         <p class="copyright">&copy; 2025 Ragini Kumain</p>
     </footer>
 
-    <!-- Load Data First, Then Script -->
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <template id="bento-box-template">
+        <div class="bento-box">
+            <div class="bento-icon"></div>
+            <div class="bento-info">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+    </template>
+
+    <template id="project-card-template">
+        <div class="project-card">
+            <div class="p-header">
+                <span class="domain"></span>
+                <a class="live-link" target="_blank" rel="noopener noreferrer"><span class="fas fa-external-link-alt" aria-hidden="true"></span> Live</a>
+            </div>
+            <h3></h3>
+            <div class="p-body">
+                <div class="p-row">
+                    <strong>Challenge:</strong> <span class="challenge"></span>
+                </div>
+                <div class="p-row">
+                    <strong>Solution:</strong> <span class="solution"></span>
+                </div>
+            </div>
+            <div class="p-tags"></div>
+        </div>
+    </template>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
